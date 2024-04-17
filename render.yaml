@@ -1,7 +1,7 @@
 services:
   # A Docker web service
   - type: web
-    name: huohuo_alist
+    name: huohuo_clouddisk
     env: docker
     repo: https://github.com/different00/alist-render.git # optional
     region: oregon # optional (defaults to oregon)
@@ -9,7 +9,7 @@ services:
     healthCheckPath: /
     envVars:
       - key: PORT
-        value: 80
+        value: 5244
       - key: DB_TYPE
         # value: sqlite3
         sync: false
@@ -29,7 +29,7 @@ services:
         # value: db_name
         sync: false
       - key: DB_TABLE_PREFIX
-        # value: alist_
+        # value: xlist_
         sync: false
       - key: CDN
         # value: https://npm.elemecdn.com/alist-web@$version/dist
